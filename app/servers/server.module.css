@@ -1,0 +1,45 @@
+.server_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.server_data {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ffdaf9;
+  background-color: #ffdaf9;
+  border-radius: 0.5rem;
+  padding: 10px;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+
+.server_data:hover {
+  border: 1px solid #ffc7f6;
+  background-color: #ffc7f6;
+}
+
+.guild_image {
+  border-radius: 50%;
+  background-color: #2b2d31;
+}
+
+.guild_name {
+    color: black;
+}
+
+.hide_underline {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .server_data {
+    width: 80vw;
+  }
+}
