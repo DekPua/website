@@ -6,7 +6,16 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "DekPua",
-  description: "DekPua",
+  description: "DekPua พื้นที่สำหรับนักเรียนโรงเรียนปัว",
+  keywords: ["dekpua", "DekPua", "เด็กปัว", "โรงเรียนปัว", "Pua School", "Dek Pua", "dek pua"],
+  publisher: "DekPua Team",
+  openGraph: {
+    title: "DekPua",
+    url: "https://dekpua.hewkawar.xyz/",
+    images: "https://dekpua.hewkawar.xyz/favicon.png",
+    locale: "th",
+    type: 'website',
+  }
 };
 
 async function getLoginData(access_token) {

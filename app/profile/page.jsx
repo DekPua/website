@@ -112,6 +112,14 @@ function renderFlag(flagData) {
     return haveFlagsList;
 }
 
+export const metadata = {
+    robots: {
+        index: false,
+        follow: true,
+        nocache: true,
+    },
+}
+
 export default async function Profile() {
     const cookieStrore = cookies();
 

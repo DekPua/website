@@ -19,6 +19,20 @@ async function getRawText(url) {
     return text;
 }
 
+export const metadata = {
+  title: "เกี่ยวกับ | DekPua",
+  description: "DekPua พื้นที่สำหรับนักเรียนโรงเรียนปัว",
+  keywords: ["dekpua", "DekPua", "เด็กปัว", "โรงเรียนปัว", "Pua School", "Dek Pua", "dek pua"],
+  publisher: "DekPua Team",
+  openGraph: {
+    title: "เกี่ยวกับ | DekPua",
+    url: "https://dekpua.hewkawar.xyz/about",
+    images: "https://dekpua.hewkawar.xyz/favicon.png",
+    locale: "th",
+    type: 'website',
+  }
+};
+
 export default async function About() {
     const aboutLayer = await getAboutLayer();
     

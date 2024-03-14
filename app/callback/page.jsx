@@ -3,6 +3,14 @@
 import { setCookie } from "cookies-next";
 import { useRouter, useSearchParams } from "next/navigation"
 
+export const metadata = {
+    robots: {
+        index: false,
+        follow: true,
+        nocache: true,
+    },
+}
+
 export default function Callback() {
     const searchParams = useSearchParams();
     const router = useRouter();
