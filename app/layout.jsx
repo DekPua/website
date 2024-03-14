@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 async function getLoginData(access_token) {
-  const res = await fetch(`http://localhost:4030/auth/info?access_token=${access_token}`, { cache: "force-cache" });
+  const res = await fetch(`https://dekpua-api.hewkawar.xyz/auth/info?access_token=${access_token}`, { cache: "force-cache" });
 
   return res.json()
 }
