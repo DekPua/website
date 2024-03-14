@@ -2,12 +2,10 @@
 import Image from "next/image";
 import Style from "./components.module.css"
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Nav({ loginDetail }) {
-    const loginUrl = "https://discord.com/oauth2/authorize?client_id=1213460455503302716&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A4030%2Fauth%2Fdiscord%2Fcallback&scope=identify+email+guilds";
-    const router = useRouter();
+    const loginUrl = "https://discord.com/oauth2/authorize?client_id=1213460455503302716&response_type=code&redirect_uri=https%3A%2F%2Fdekpua-api.hewkawar.xyz%2Fauth%2Fdiscord%2Fcallback&scope=identify+email+guilds";
 
     const [isProfileOpen, setIsProfileOpen] = useState(false);
 
