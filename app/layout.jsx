@@ -19,23 +19,9 @@ export const metadata = {
 };
 
 async function getLoginData(access_token) {
-  // Check if cached data is available
-  const cachedData = sessionStorage.getItem('loginData');
-  if (cachedData) {
-    const { timestamp, data } = JSON.parse(cachedData);
-    // Check if the data is not expired (30 minutes)
-    if (Date.now() - timestamp < 30 * 60 * 1000) {
-      return data;
-    }
-  }
+  const res = await fetch(`https://dekpua-api.hewkawar.xyz/auth/info?access_token=${access_token}`, { "cache": "default" });
 
-  const res = await fetch(`https://dekpua-api.hewkawar.xyz/auth/info?access_token=${access_token}`, { cache: "force-cache" });
-  const loginDetail = await res.json();
-
-  // Cache the data in sessionStorage
-  sessionStorage.setItem('loginData', JSON.stringify({ timestamp: Date.now(), data: loginDetail }));
-
-  return loginDetail;
+  return res.json()
 }
 
 export default async function RootLayout({ children }) {
