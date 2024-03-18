@@ -1,21 +1,11 @@
 'use client'
 
-import { deleteCookie } from "cookies-next";
+import { deleteCookie, getCookie } from "cookies-next";
 import { useRouter } from "next/navigation";
 
-export const metadata = {
-    robots: {
-        index: false,
-        follow: true,
-        nocache: true,
-    },
-}
-
 export default function Logout() {
-    deleteCookie('access_token');
     const router = useRouter();
-    
-    router.prefetch('/');
-    router.push('/');
-    router.refresh();
+    const access_token = getCookie('access_token');
+
+    router.push(`https://dekpua-api.hewkawar.xyz/auth/logout?access_token=${access_token}`);
 }
