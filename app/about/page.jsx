@@ -3,7 +3,7 @@ import remarkGfm from "remark-gfm";
 import style from './about.module.css';
 
 async function getAboutLayer() {
-    const data = await fetch('https://raw.githubusercontent.com/DekPua/rules/main/layouts/about.json', { cache: 'force-cache' });
+    const data = await fetch('https://raw.githubusercontent.com/DekPua/rules/main/layouts/about.json', { cache: 'default' });
 
     const text = await data.text();
 

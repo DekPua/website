@@ -3,7 +3,7 @@ import remarkGfm from "remark-gfm";
 import style from './rules.module.css';
 
 async function getRulesLayer() {
-    const data = await fetch('https://raw.githubusercontent.com/DekPua/rules/main/layouts/rule.json', { cache: 'force-cache' });
+    const data = await fetch('https://raw.githubusercontent.com/DekPua/rules/main/layouts/rule.json', { cache: 'default' });
 
     const text = await data.text();
 
